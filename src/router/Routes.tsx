@@ -12,6 +12,8 @@ import JoinPage from '../pages/Auth/JoinPage/page';
 import SequencePage from '../pages/Auth/JoinPage/SequencePage';
 import LoginPage from '../pages/Auth/LoginPage/page';
 
+import SurveyPage from '../pages/Surveypage/Surveyfirst/page';
+
 const Routes = () => {
   const location = useLocation();
 
@@ -33,6 +35,11 @@ const Routes = () => {
           <Route path="join" element={<JoinPage />} />
           <Route path="join/:stage" element={<SequencePage />} />
           <Route path="login" element={<LoginPage />} />
+        </Route>
+
+        {/* 테스트용 설문조사 라우팅 */}
+        <Route path="survey">
+          <Route path="first" element={<SurveyPage />} />
         </Route>
 
         {/* 소통하러 올래 라우팅입니다 */}
